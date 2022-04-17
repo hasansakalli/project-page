@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Performance Marketing</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/9753036172.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="menubar">
+        
+        <div class="logo">
+          <div class="logoImg"><img src="branding.svg" id="logoImg" alt="" /></div>
+        <div class="logoIcon">
+            <i id="bars" class="fa-solid fa-bars" onclick="togglemenu()" ></i>
+          </div>
+        </div>
+        <div class="menu">
+          <ul id="menuList">
+            <li>Agentur</li>
+            <li>Projekte</li>
+            <li>Impulse</li>
+            <li>Karriere</li>
+            <li>Kontakt</li>
+            <li><i id="search" class="fa-solid fa-magnifying-glass"></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <h1 id="titel">Das leisten wir als Performance Marketing Agentur</h1>
+      <h4 id="titel-small">
+        Das Schöne am Performance Marketing ist ja, dass sich Ergebnisse messen,
+        auswerten und feiern lassen. Unsere strategische Arbeit stellt dabei
+        sicher, dass wir in unserer Vorgehensweise innovativer, effizienter und
+        wirkungsvoller für dich und deine Ziele werden
+      </h4>
+      <div class="cards">
+        <div class="cards1 box">
+          <p id="number" class="number1">1</p>
+          <p id="card-titel">IST-Analyse</p>
+          <p id="card-text">
+            Wir analysieren die Ausgangssituation und lernen deine
+            Herausforderung kennen. Wir werfen einen Blick auf deine direkten
+            Wettbewerber. Im Falle, dass bereits Kampagnen in Ads oder Paid
+            Social laufen, arbeiten wir uns ein und tragen Erkenntnisse
+            zusammen.
+          </p>
+        </div>
+        <div class="cards1 box">
+          <p id="number" class="number2">2</p>
+          <p id="card-titel">Strategie</p>
+          <p id="card-text">
+            Wir entwerfen das ideale Vorgehen. Dabei ziehen wir Insights zur
+            Zielgruppe heran und nutzen Informationen zu deinen Produkten und
+            dem geplanten Budget, um die Mediaplanung aufzustellen. Gemeinsam
+            definieren wir KPIs und erstellen Prognosen.
+          </p>
+        </div>
+        <div class="cards1 box">
+          <p id="number" class="number3">3</p>
+          <p id="card-titel">Kampagnen-Setup</p>
+          <p id="card-text">
+            Jetzt geht’s an die Umsetzung! Wir legen Werbekonten an und setzen
+            die Kampagnen in allen Tools auf. Das Tracking wird eingerichtet,
+            ein KPI-Dashboard aufgesetzt. Auf Wunsch setzen wir Landingpages um.
+            Wenn alles vorbereitet ist, drücken wir auf „Start“.
+          </p>
+        </div>
+        <div class="cards1 box">
+          <p id="number" class="number4">4</p>
+          <p id="card-titel">Monitoring & Optimierung</p>
+          <p id="card-text">
+            Wir beobachten ab Start alle Signale und Ergebnisse, vom Klick bis
+            zum Kauf. Wir steigern die Ergebnisse durch Optimierungen am Setup
+            und halten dich auf dem Laufenden. Damit du zu jeder Zeit das Gefühl
+            hast, dein Werbebudget richtig zu investieren.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+
+
+var menuList = document.getElementById("menuList");
+menuList.style.maxHeight = "0px";
+      function togglemenu() {
+              
+        if ((menuList.style.maxHeight == "0px")) {
+          menuList.style.maxHeight = "350px";
+        } else {
+          menuList.style.maxHeight = "0px";
+        }
+      }
+    </script>
+  </body>
+</html>
