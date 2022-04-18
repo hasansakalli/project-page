@@ -51,13 +51,12 @@ body {
   align-items: center;
   padding-top: 0.3rem;
 }
-.logo img {
+#logoImage {
   width: 260px;
   height: 30px;
 }
 
 .menu ul {
-
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -161,8 +160,30 @@ body {
   cursor: pointer;
 }
 
+#mannImg {
+  width: 130px;
+  border-radius: 180px;
+  position: absolute;
+  right: 0;
+  transition: 1s;
+  opacity: 0;
+  border: 2px solid rgba(11, 11, 142, 0.655);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  cursor: pointer;
+}
 
-
+#openImg {
+  width: 30vw;
+  position: absolute;
+  left: 35%;
+  top: 15%;
+  display: block;
+  overflow: hidden;
+  transition: 1s;
+  border-radius: 10px;
+}
 
 @media (max-width: 992px) {
   .menubar {
@@ -177,7 +198,7 @@ body {
   }
 
   #titel {
-    margin-top: 1em;
+    margin-top: 2em;
     line-height: 31px;
   }
 }
@@ -232,6 +253,7 @@ body {
     text-align: center;
     transition: 0.7s;
     border-radius: 10px;
+    cursor: pointer;
   }
   .menu ul li {
     display: block;
@@ -241,8 +263,9 @@ body {
   #menuList {
     overflow: hidden;
     transition: 0.7s;
+    margin-top: 0.7em;
   }
-.logo{
- width: 80%;
-}
+  .logo {
+    width: 80%;
+  }
 }
