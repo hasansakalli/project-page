@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&family=Roboto:wght@300;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --menu-bg: rgba(19, 29, 39, 0.8);
+  --body-bg-color: #131d27;
+  --noto: "Noto Sans KR", sans-serif;
+  --roboto: "Roboto", Arial, Helvetica, sans-serif;
+  --orange: #ff7d00;
+  --white: #fff;
+  --bgColor: #375166;
+  --cards-bacground-color: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.1) 0,
+      rgba(255, 255, 255, 0.25) 100%
+    )
+    repeat scroll !important;
+  --cards-bacground-border: 1px solid rgba(255, 255, 255, 0.46);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--body-bg-color);
+  color: #fff;
+  font-family: var(--roboto);
+}
+.container2 {
+  max-width: 350px;
+  place-items: center;
+  box-sizing: border-box;
+  background-color: #2B343D;
+  position: absolute;
+  left: 35%;
+  top: 15%;
+  padding: 1em;
+  display: none;
+  overflow: hidden;
+  transition: all 1sn;
+  border-radius: 10px;
+  gap: 0.2em;
+  z-index: 2;
+ 
+   
+   
+  
+}
+.popupImg{
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+}
+.person{
+    width: 400px;
+ 
+  padding: 1em;
+    padding-left: 1.4em;
+    margin-left: -2em;
+    display: grid;
+    background-color: var(--bgColor);
+
+}
+input{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    height: 50px;
+    color: white;
+
+}
+#check{
+    width: 15px; 
+    font-size: 11px;
+}
+label{
+    font-size: 14px; 
+}
+.checkBox{
+    display: flex;
+    align-items: flex-end;
+    text-align: left;
+    gap: 0.3em;
+    margin-bottom: 1em;
+}
+#myForm{
+ 
+  text-align: center;
+
+}
+#btn{
+    width: 95%;
+    padding: 0.5em;
+    margin-bottom: 2em;
+    color: white;
+    background-color: var(--orange);
+    border: none;
+    font-family: var(--roboto);
+    font-size: 14px;
+    cursor: pointer;
+}
+#btn:hover{
+    background-color:#ff7b00a3;
+    transition: 0.3s;
+    
+
+}
+#text{
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: 300;
+    margin-top: 0.4em;
+}
+#name{
+    font-weight: 700; 
+}
+#btnClose{
+    background-color: brown;
+    border: none;
+    color: white;
+   width: 3rem;
+   border-radius: 3px;
+}
+#btnClose:hover{
+    background-color: #ff7d00;
+    cursor: pointer;
+}
+a{
+   
+    color: white;
+    font-weight: bold;
+}
