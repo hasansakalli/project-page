@@ -278,7 +278,7 @@ gap: 3em;
 
 
   }
-  @media (max-width: 300px) {
+  @media (max-width: 500px) {
  
     .cards{
       display: grid;
