@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Performance Marketing</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="popup.css" />
+
     <script
       src="https://kit.fontawesome.com/9753036172.js"
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body onload="myFunction()">
     <div class="container">
       <div class="menubar">
-        
         <div class="logo">
-          <div class="logoImg"><img src="branding.svg" id="logoImg" alt="" /></div>
-        <div class="logoIcon">
-            <i id="bars" class="fa-solid fa-bars" onclick="togglemenu()" ></i>
+          <div class="logoImg">
+            <img id="logoImage" src="branding.svg" id="logoImg" alt="" />
+          </div>
+          <div class="logoIcon">
+            <i id="bars" class="fa-solid fa-bars" onclick="togglemenu()"></i>
           </div>
         </div>
         <div class="menu">
@@ -84,15 +87,98 @@
         </div>
       </div>
     </div>
+    <img id="mannImg" src="mann.webp" onclick="openImage()" />
 
+    <!-- <img id="openImg" src="openIMG.JPG" onclick="closeImage()" > -->
+
+    <div class="container2">
+      <div class="person">
+        <p id="titel1">Dein Ansprechpartner</p>
+        <h3 id="name">Steven Campbell</h3>
+        <img class="popupImg" src="mann.webp" alt="" />
+      </div>
+      <div class="formHead">
+        <h3 id="text">
+          Hast du Lust auf eine unverbindliche Expertensession, um ehrliches
+          Feedback zu deiner Herausforderung zu bekommen?
+        </h3>
+        <form id="myForm">
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Dein Vor- und Nachname"
+          />
+          <hr />
+          <input
+            type="number"
+            name=""
+            id=""
+            placeholder="Deine Telefonnummer"
+          />
+          <hr />
+          <input type="text" name="" id="" placeholder="Deine E-mail-Adresse" />
+          <hr />
+          <div class="checkBox">
+            <input type="checkbox" id="check" name="" />
+            <label for="check"
+              >Ich habe die
+              <span><a href="#">Datenschutzbestimmungen</a></span> gelesen und
+              akzeptiere diese.</label
+            >
+          </div>
+
+          <button id="btn">KOSTENFREIEN TERMIN ANFRAGEN</button>
+          <button id="btnClose" onclick="closeImage()">Close</button>
+        </form>
+      </div>
+    </div>
     <script>
+      //-------------------right-mann js codes--------------------//
 
+      var mannImg = document.getElementById("mannImg");
 
-var menuList = document.getElementById("menuList");
-menuList.style.maxHeight = "0px";
+      function myFunction() {
+        mannImg.style.opacity = 1;
+        mannImg.style.transform = "translateX(-60px)";
+        mannImg.style.transform = "transition(5s)";
+      }
+
+      const myTimeout = setTimeout(myGreeting, 7000);
+      function myGreeting() {
+        mannImg.style.opacity = 0;
+      }
+
+      function myStopFunction() {
+        clearTimeout(myTimeout);
+      }
+
+      //-------------------center form js codes--------------------//
+
+      var openImg = document.getElementById("openImg");
+      var container2 = document.querySelector(".container2");
+
+      function openImage() {
+        container2.style.maxHeight = "0px";
+        if (container2.style.maxHeight == "0px") {
+          container2.style.display = "block";
+          container2.style.maxHeight = "650px";
+        }
+      }
+      // function openImage(){
+
+      //   openImg.style.display="block"
+
+      // }
+
+      function closeImage() {
+        container2.style.display = "none";
+      }
+
+      var menuList = document.getElementById("menuList");
+      menuList.style.maxHeight = "0px";
       function togglemenu() {
-              
-        if ((menuList.style.maxHeight == "0px")) {
+        if (menuList.style.maxHeight == "0px") {
           menuList.style.maxHeight = "350px";
         } else {
           menuList.style.maxHeight = "0px";
