@@ -43,6 +43,7 @@
         sicher, dass wir in unserer Vorgehensweise innovativer, effizienter und
         wirkungsvoller für dich und deine Ziele werden
       </h4>
+
       <div class="cards">
         <div class="cards1 box">
           <p id="number" class="number1">1</p>
@@ -130,6 +131,7 @@
 
           <button id="btn">KOSTENFREIEN TERMIN ANFRAGEN</button>
           <button id="btnClose" onclick="closeImage()">Close</button>
+        
         </form>
       </div>
     </div>
@@ -159,21 +161,18 @@
       var container2 = document.querySelector(".container2");
 
       function openImage() {
-        container2.style.maxHeight = "0px";
-        if (container2.style.maxHeight == "0px") {
-          container2.style.display = "block";
-          container2.style.maxHeight = "650px";
-        }
+        container2.style.display = "block";
+        container2.style.maxHeight = "650px"
+       
+   
       }
-      // function openImage(){
-
-      //   openImg.style.display="block"
-
-      // }
-
+     
       function closeImage() {
         container2.style.display = "none";
+
       }
+   
+ //-------------------responsive menu list js codes--------------------//
 
       var menuList = document.getElementById("menuList");
       menuList.style.maxHeight = "0px";

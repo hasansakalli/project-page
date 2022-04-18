@@ -37,15 +37,17 @@ body {
   box-sizing: border-box;
   background-color: #2B343D;
   position: absolute;
-  left: 35%;
-  top: 15%;
+  left: 37%;
+  top: 12%;
   padding: 1em;
   display: none;
   overflow: hidden;
   transition: all 1sn;
   border-radius: 10px;
   gap: 0.2em;
-  z-index: 2;
+  z-index: 2; 
+
+ 
  
    
    
@@ -139,3 +141,14 @@ a{
     color: white;
     font-weight: bold;
 }
+
+@media (max-width: 768px)  {
+  .container2{
+    max-width: 300px;
+    max-height: fit-content;
+    left: 15%;
+    top: 100%;
+  }
+ }
+
+

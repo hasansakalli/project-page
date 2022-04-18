@@ -31,10 +31,11 @@ body {
   color: #fff;
 }
 .container {
-  max-width: 100vw;
+  max-width: 100%;
   display: grid;
   place-items: center;
   box-sizing: border-box;
+
 }
 .menubar {
   display: flex;
@@ -42,8 +43,9 @@ body {
   align-items: center;
   background-color: var(--menu-bg);
   width: 100%;
-  height: 45px;
+  height: 35px;
   border-bottom: 1px solid gray;
+  
 }
 .logo {
   display: flex;
@@ -185,68 +187,75 @@ body {
   border-radius: 10px;
 }
 
-@media (max-width: 992px) {
-  .menubar {
-    max-width: 100vw;
-  }
-  .cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.1rem;
-    margin-top: 4em;
-  }
 
-  #titel {
-    margin-top: 2em;
-    line-height: 31px;
-  }
+@media (max-width: 1000px) {
+.container{
+  display: grid;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 }
 @media (max-width: 768px) {
-  .cards {
+
+  .logo{
+gap: 3em;
+  }
+  
+  .container{
     display: grid;
-    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 1rem;
+    align-items: center;
   }
-  .box {
-    min-width: 500px;
-    max-height: 120px;
-    padding: 4px;
+  
+  .cards{
+    display: grid;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    align-items: center;
   }
+  .box{
+    min-width: 768px;
+  }
+.menubar{
+  min-width: 768px;
+}
 
-  .box #card-text {
-    font-size: clamp(0.625rem, 0.5227rem + 0.5455vw, 1rem);
-    width: fit-content;
-    height: fit-content;
-  }
 
-  .box #card-titel {
+.box #card-text {
+  font-size: 17px;
+  min-width: 768px;
+  height:100px ;
+  margin: 0;
+  padding: 7px
+}
+#number{ top: -30px;
+  left: 344px;}
+
+
+  #titel-small {
+    max-width: 90%;
+    
+    font-size:14px;
+    line-height: 21px;
+    font-weight: 300;
+    color: #ffffff;
+    font-family: var(--roboto);
+  margin-top: 1em;
     text-align: center;
-
-    line-height: 1px;
-    font-weight: 100;
-    letter-spacing: 0px;
-    margin-top: -20px;
+    
   }
-
-  #number {
-    left: 230px;
-  }
-  .cards {
-    margin-top: 5em;
-  }
-
   #bars {
     display: block;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   .menu ul {
-    width: 100%;
+    min-width: 100%;
     background: var(--body-bg-color);
-    position: absolute;
-    top: 75px;
-    right: 0;
+    position: fixed;
+    top: 18%;
+    left:50%;
+    transform: translate(-50%, -50%);
     gap: 0.2em;
     z-index: 2;
     display: grid;
@@ -254,6 +263,7 @@ body {
     transition: 0.7s;
     border-radius: 10px;
     cursor: pointer;
+  
   }
   .menu ul li {
     display: block;
@@ -265,7 +275,115 @@ body {
     transition: 0.7s;
     margin-top: 0.7em;
   }
-  .logo {
-    width: 80%;
+
+
   }
-}
+  @media (max-width: 300px) {
+ 
+    .cards{
+      display: grid;
+      flex-wrap: wrap;
+      margin-top: 4em;
+      align-items: center;
+    }
+    .logo{
+      gap: 0.5em;
+      padding-right: 1em;
+    
+        }
+        #logoImage{
+          width: 70%;
+          padding-left: 1em;
+        }
+    .box{
+      min-width: 300px;
+     
+        margin: 0;
+        padding: 0;
+   
+    }
+  .menubar{
+    min-width: 300px;
+  }
+  .menu ul{
+    display: none;
+  }
+  
+  .box #card-text {
+    font-size: 10px;
+    min-width: 200px;
+    min-height:120px ;
+    line-height: 21px;
+    height:70px ;
+   text-align: justify;
+   align-items: center;
+   padding-left: 0.3em;
+  }
+
+  #titel {
+    max-width: 100%;
+ 
+    font-size: 13px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: var(--noto);
+    letter-spacing: 3px;
+    text-align: center;
+  }
+  #titel-small {
+    max-width: 80%;
+    
+    font-size:10px;
+    line-height: 21px;
+    font-weight: 300;
+    color: #ffffff;
+    font-family: var(--roboto);
+  
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+
+  .box{
+    margin: 0;
+    padding: 0;
+  }
+  #number{ top: -30px;
+    left: 130px;}
+  
+    
+
+    #bars {
+      display: block;
+      font-size: 1.5rem;
+    }
+    .menu ul {
+      min-width: 100%;
+      background: var(--body-bg-color);
+      position: fixed;
+      top: 18%;
+      left:50%;
+      transform: translate(-50%, -50%);
+      gap: 0.2em;
+      z-index: 2;
+      display: grid;
+      text-align: center;
+      transition: 0.7s;
+      border-radius: 10px;
+      cursor: pointer;
+      
+    
+    }
+    .menu ul li {
+      display: block;
+      margin-top: 3px;
+      margin-bottom: 3px;
+    }
+    #menuList {
+      overflow: hidden;
+      transition: 0.7s;
+      margin-top: 0.7em;
+      margin-top: 2em;
+    }
+  }
